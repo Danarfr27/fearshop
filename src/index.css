@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Inter:wght@400;500;600&family=Share+Tech+Mono&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 200 14% 4%;
+    --foreground: 210 20% 96%;
+    --card: 200 16% 7%;
+    --card-foreground: 210 20% 96%;
+    --popover: 200 16% 7%;
+    --popover-foreground: 210 20% 96%;
+    --primary: 108 100% 54%;
+    --primary-foreground: 200 14% 4%;
+    --secondary: 200 10% 12%;
+    --secondary-foreground: 210 20% 96%;
+    --muted: 200 10% 12%;
+    --muted-foreground: 200 8% 68%;
+    --accent: 108 100% 54%;
+    --accent-foreground: 200 14% 4%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 20% 96%;
+    --border: 108 100% 54%;
+    --input: 200 10% 15%;
+    --ring: 108 100% 54%;
+    --radius: 0px;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    @apply bg-[#0B0E10] text-[#F2F4F6] antialiased;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: rgba(57, 255, 20, 0.3);
+    color: #F2F4F6;
+  }
+}
+
+.font-orbitron {
+  font-family: 'Orbitron', sans-serif;
+}
+
+.font-mono-tech {
+  font-family: 'Share Tech Mono', monospace;
+}
+
+/* Neon green glow */
+.neon-glow {
+  text-shadow: 0 0 10px rgba(57, 255, 20, 0.5),
+               0 0 20px rgba(57, 255, 20, 0.3),
+               0 0 40px rgba(57, 255, 20, 0.2);
+}
+
+.neon-border {
+  box-shadow: 0 0 8px rgba(57, 255, 20, 0.3),
+              inset 0 0 8px rgba(57, 255, 20, 0.05);
+}
+
+/* Green border utility */
+.green-border {
+  border: 1px solid rgba(57, 255, 20, 0.55);
+}
+
+/* Card hover effect */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  border-color: rgba(57, 255, 20, 0.9);
+  box-shadow: 0 0 20px rgba(57, 255, 20, 0.2),
+              0 0 40px rgba(57, 255, 20, 0.1);
+  transform: translateY(-4px);
+}
+
+/* Button styles */
+.btn-primary {
+  @apply px-6 py-3 bg-transparent green-border text-[#39FF14] font-mono-tech text-sm tracking-wider;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  @apply bg-[#39FF14] text-[#0B0E10];
+  box-shadow: 0 0 20px rgba(57, 255, 20, 0.4);
+}
+
+.btn-secondary {
+  @apply px-6 py-3 bg-transparent border border-[rgba(242,244,246,0.3)] text-[#F2F4F6] font-mono-tech text-sm tracking-wider;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  border-color: rgba(242, 244, 246, 0.7);
+}
+
+/* Noise overlay */
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.04;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0E10;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(57, 255, 20, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(57, 255, 20, 0.5);
+}
+
+/* Input styling */
+.terminal-input {
+  @apply w-full bg-[#11181C] border border-[rgba(57,255,20,0.3)] px-4 py-3 text-[#F2F4F6] font-mono-tech text-sm;
+  transition: all 0.3s ease;
+}
+
+.terminal-input:focus {
+  @apply outline-none;
+  border-color: rgba(57, 255, 20, 0.8);
+  box-shadow: 0 0 10px rgba(57, 255, 20, 0.2);
+}
+
+.terminal-input::placeholder {
+  color: rgba(167, 176, 183, 0.5);
+}
+
+/* Parallax container */
+.parallax-container {
+  will-change: transform;
+}
+
+/* Green dot indicator */
+.green-dot {
+  @apply w-2 h-2 bg-[#39FF14];
+  box-shadow: 0 0 6px rgba(57, 255, 20, 0.6);
+}
+
+/* Line draw animation helper */
+.line-draw {
+  transform-origin: left center;
+}
+
+.line-draw-v {
+  transform-origin: top center;
+}
+
+/* Responsive typography */
+.text-hero {
+  font-size: clamp(48px, 10vw, 160px);
+  line-height: 0.9;
+}
+
+.text-section-title {
+  font-size: clamp(28px, 4vw, 56px);
+  line-height: 1.1;
+}
+
+/* Pinned section base */
+.pinned-section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Barcode modal */
+.barcode-modal {
+  @apply fixed inset-0 z-[100] flex items-center justify-center p-4;
+  background: rgba(11, 14, 16, 0.95);
+  backdrop-filter: blur(8px);
+}
+
+/* Glitch effect */
+@keyframes glitch {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+}
+
+.glitch:hover {
+  animation: glitch 0.3s ease infinite;
+}
+
+/* Scan line effect */
+.scan-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(57, 255, 20, 0.5), transparent);
+  animation: scan 3s linear infinite;
+}
+
+@keyframes scan {
+  0% { top: 0%; }
+  100% { top: 100%; }
+}
