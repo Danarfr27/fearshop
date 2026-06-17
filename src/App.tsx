@@ -28,7 +28,7 @@ export interface Product {
 export const products: Product[] = [
   { id: 1, name: 'FIRDHAN GPT', price: 100000, originalPrice: 150000, rating: 5, image: '/images/product1.jpg', barcode: '/barcodes/barcode1.png', code: 'FE4R-CHA-EXC-99K' },
   { id: 2, name: 'GALIRUS TOOLS', price: 860000, originalPrice: 1000000, rating: 5, image: '/images/product2.jpg', barcode: '/barcodes/barcode2.png', code: 'FE4R-CHA-STD-55K' },
-  { id: 3, name: 'OSINT WORM', price: 75000, originalPrice: 100000, rating: 5, image: '/images/product3.jpg', barcode: '/barcodes/barcode3.png', code: 'FE4R-DDoS-DYX-25K' },
+  { id: 3, name: '', price: 75000, originalPrice: 100000, rating: 5, image: '/images/product3.jpg', barcode: '/barcodes/barcode3.png', code: 'FE4R-DDoS-DYX-25K' },
   { id: 4, name: 'SINCE CNC', price: 50000, originalPrice: 100000, rating: 4, image: '/images/product4.jpg', barcode: '/barcodes/barcode4.png', code: 'FE4R-CNC-SNC-50K' },
   { id: 5, name: 'CRAXSRAT V7.8', price: 120000, originalPrice: 2550000, rating: 5, image: '/images/product5.jpg', barcode: '/barcodes/barcode5.png', code: 'FE4R-RAT-CRX-120K' },
   { id: 6, name: 'VIP RAT', price: 40000, originalPrice: 45000, rating: 3, image: '/images/product6.jpg', barcode: '/barcodes/barcode6.png', code: 'FE4R-RAT-VIP-40K' },
