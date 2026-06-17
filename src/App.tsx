@@ -26,7 +26,7 @@ export interface Product {
 }
 
 export const products: Product[] = [
-  { id: 1, name: 'CARERAxHAT EXCLUSIVE', price: 99000, originalPrice: 150000, rating: 5, image: '/images/product1.jpg', barcode: '/barcodes/barcode1.png', code: 'FE4R-CHA-EXC-99K' },
+  { id: 1, name: 'FIRDHAN GPT', price: 100000, originalPrice: 150000, rating: 5, image: '/images/product1.jpg', barcode: '/barcodes/barcode1.png', code: 'FE4R-CHA-EXC-99K' },
   { id: 2, name: 'CARERAxHAT STANDAR', price: 55000, originalPrice: 85000, rating: 5, image: '/images/product2.jpg', barcode: '/barcodes/barcode2.png', code: 'FE4R-CHA-STD-55K' },
   { id: 3, name: 'DDoS DYYAXE C2', price: 25000, originalPrice: 75000, rating: 5, image: '/images/product3.jpg', barcode: '/barcodes/barcode3.png', code: 'FE4R-DDoS-DYX-25K' },
   { id: 4, name: 'SINCE CNC', price: 50000, originalPrice: 100000, rating: 4, image: '/images/product4.jpg', barcode: '/barcodes/barcode4.png', code: 'FE4R-CNC-SNC-50K' },
